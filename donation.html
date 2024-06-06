@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Form</title>
+
+    <!-- Favicon, CSS & JS -->
+    <link rel="icon" href="assets/logo.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/donation-form.css">
+    <link rel="stylesheet" href="./styles/main.css">
+
+    <script src="js/client.js" defer></script>
+
+    <!-- Font Awesome icons CDN -->
+    <script src="https://use.fontawesome.com/4e51920be5.js"></script>
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body onload=controlButton()>
+
+    <!-- Navbar -->
+    <div id="navbar" class="navbar">
+        <ul>
+            <li>
+                <a href="charities.html" id=register-button>CHARITIES AND RESTAURANTS</a>
+            </li>
+            <li>
+                <a href="recieveddonations.html" id=register-button>DONATIONS</a>
+            </li>
+            <li>
+                <a href="donation.html" id=make-donation-button>MAKE DONATION</a>
+            </li>
+            <li>
+                <a href="register.html" id=register-button>REGISTER</a>
+            </li>
+            <li>
+                <a href="index.html">HOME</a>
+            </li>
+            <img src="assets/logo.png" class="navbar-logo">
+        </ul>
+    </div>
+
+    <body onload="getBlobstoreURL()">
+
+        <form id="donation-form" class="form-container" method="POST" enctype="multipart/form-data">
+
+            <h2 class="center">MAKE A FOOD DONATION</h2>
+
+            <!-- Name -->
+            <label><b>Restaurant Name</b></label>
+            <input placeholder="Enter Restaurant name" name="restaurantName" required>
+
+            <label><b>Restaurant Email</b></label>
+            <input placeholder="Enter Restaurant email" name="restaurantName" required>
+
+            <!-- Location -->
+            <label><b>Restaurant Location</b></label>
+            <input placeholder="Enter Restaurant location" name="location" required>
+
+            <!-- Food Category -->
+            <label><b>Food Category</b></label> Choose multiple options by pressing the command/ctrl key
+            <br>
+            <select class="mdb-select colorful-select dropdown-primary md-form" name="category" multiple
+                searchable="Search here..">
+                <option value="" disabled selected>Select food categories</option>
+                <option value="Vegetarian">Vegetarian</option>
+                <option value="Non-Vegetarian">Non-Vegetarian</option>
+            </select>
+            <br>
+
+            <!-- Date & Time -->
+            <br>
+            <label><b>Specify a date and time for donation:</b></label>
+            <input type="datetime-local" name="pickUpTime" required>
+
+            <!-- Supply -->
+            <label><b>Specify food amount by how many people it is sufficient for:</b></label>
+            <input type="number" step="1" placeholder="Specify food capacity" name="quantity" required>
+
+            <!-- Special Instructions -->
+            <label><b>Special Instructions</b></label>
+            <input placeholder="Enter any special instructions" name="specialInstructions">
+
+            <!-- Images -->
+            <br>
+            <label><b>Upload an image:</b></label>
+            <input type="file" name="image">
+
+            <!-- Submit & Cancel -->
+            <a href="recieveddonations.html" type="submit" class="btn">Submit Donation</a>
+            <a href="index.html" type="button" class="btn cancel">Cancel</a>
+            <!--button href="index.html" type="submit" class="btn">Submit Donation</button>
+        <button type="button" class="btn cancel" onclick="">Cancel</button-->
+        </form>
+
+    </body>
+
+</html>
