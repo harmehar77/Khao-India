@@ -1,0 +1,18 @@
+th,
+td {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 19px;
+    padding-right: 29px;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+tr:hover {
+    background-color: #baffbc;
+}
